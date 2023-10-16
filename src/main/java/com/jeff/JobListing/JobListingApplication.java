@@ -15,7 +15,7 @@ public class JobListingApplication {
     public GroupedOpenApi controllerApi() {
         return GroupedOpenApi.builder()
                 .group("controller-api")
-                .packagesToScan("com.jeff.JobListingr") // Specify the package to scan
+                .packagesToScan("com.jeff.JobListing") // Specify the package to scan
                 .build();
     }
 
