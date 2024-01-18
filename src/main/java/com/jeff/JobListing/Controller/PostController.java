@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jeff.JobListing.Model.Post;
 import com.jeff.JobListing.Repository.PostRepository;
+import com.jeff.JobListing.Repository.SearchPostRepository;
 
 import jakarta.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -22,6 +24,9 @@ public class PostController {
 
     @Autowired
     PostRepository repo;
+
+    @Autowired
+    SearchPostRepository searchRepo;
 
     @RequestMapping(value="/")
     public void redirect(HttpServletResponse response) throws IOException {
@@ -37,6 +42,12 @@ public class PostController {
     public Post addPost(@RequestBody Post post)
     {
         return repo.save(post);
+    }
+
+    @PostMapping("/post/{text}")
+    public List<Post> search(@PathVariable String text)
+    {
+        return searchRepo.findByText(text);
     }
     
     

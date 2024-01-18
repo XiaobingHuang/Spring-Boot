@@ -8,7 +8,7 @@ public class Post {
 
   private String profile;
   private String desc;
-  private int exp;
+  private String exp;
   private String techs[];
 
   public Post() {}
@@ -29,11 +29,11 @@ public class Post {
     this.desc = desc;
   }
 
-  public int getExp() {
+  public String getExp() {
     return exp;
   }
 
-  public void setExp(int exp) {
+  public void setExp(String exp) {
     this.exp = exp;
   }
 
