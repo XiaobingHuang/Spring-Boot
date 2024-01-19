@@ -10,7 +10,7 @@ import com.jeff.JobListing.Model.Post;
 import com.jeff.JobListing.Repository.PostRepository;
 import com.jeff.JobListing.Repository.SearchPostRepository;
 
-import jakarta.servlet.http.HttpServletResponse;
+// import jakarta.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,10 +28,10 @@ public class PostController {
     @Autowired
     SearchPostRepository searchRepo;
 
-    @RequestMapping(value="/")
-    public void redirect(HttpServletResponse response) throws IOException {
-        response.sendRedirect("/swagger-ui.html");
-    }
+    // @RequestMapping(value="/")
+    // public void redirect(HttpServletResponse response) throws IOException {
+    //     response.sendRedirect("/swagger-ui.html");
+    // }
 
     @GetMapping(value="/welcome")
     public  String welcome() {
