@@ -33,6 +33,11 @@ public class PostController {
         response.sendRedirect("/swagger-ui.html");
     }
 
+    @GetMapping(value="/welcome")
+    public  String welcome() {
+        return "Welcome to spring boot heroku demo";
+    }
+
     @GetMapping(value="/posts")
     public  List<Post> getAllPosts() {
         return repo.findAll();
