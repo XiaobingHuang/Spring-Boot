@@ -14,7 +14,7 @@
 	<name>JobListing</name>
 	<description>mdb spring boot project</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
