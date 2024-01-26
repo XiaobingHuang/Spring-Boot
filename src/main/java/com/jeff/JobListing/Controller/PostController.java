@@ -39,7 +39,7 @@ public class PostController {
         return "Welcome to spring boot heroku demo";
     }
 
-    @CrossOrigin(origins = "https://job-hunting-app-cb9818296d91.herokuapp.com")
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value="/posts")
     public  List<Post> getAllPosts() {
         return repo.findAll();
