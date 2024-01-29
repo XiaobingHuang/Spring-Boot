@@ -29,8 +29,9 @@ public class JobListingApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/posts").allowedOrigins("http://localhost:3000");
-                //registry.addMapping("/posts").allowedOrigins("http://job-hunting-app-cb9818296d91.herokuapp.com/posts");
+				registry.addMapping("/**").allowedOrigins("*");
+				// registry.addMapping("/posts").allowedOrigins("http://localhost:3000");
+                // registry.addMapping("/posts").allowedOrigins("http://job-hunting-app-cb9818296d91.herokuapp.com/posts");
 			}
 		};
 	}
